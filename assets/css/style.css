@@ -1,0 +1,35 @@
+header {
+    background-color: #8ba8af;
+}
+
+a {
+    color: white;
+}
+
+.collapse {
+    display: block;
+}
+
+.main {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.post {
+    background-color: white;
+    margin: 10px auto;
+    padding: 15px;
+    overflow: hidden;
+    /*border-radius: 10px;*/
+}
+
+image {
+    max-height: 150px;
+}
+
+.lead {
+    margin-top: 15px;
+}

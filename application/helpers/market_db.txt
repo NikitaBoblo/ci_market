@@ -1,0 +1,34 @@
+CREATE TABLE `market_db`.`users` (
+    `user_id` INT NOT NULL AUTO_INCREMENT ,
+    `user_name` VARCHAR(35) NOT NULL ,
+    `user_login` VARCHAR(25) NOT NULL ,
+    `user_pass` VARCHAR(32) NOT NULL ,
+    PRIMARY KEY (`user_id`),
+    UNIQUE (`user_login`)
+) ENGINE = InnoDB;
+
+CREATE TABLE `market_db`.`naviny` (
+    `navina_id` INT NOT NULL AUTO_INCREMENT ,
+    `navina_name` VARCHAR(25) NOT NULL ,
+    `navina_text` TEXT NOT NULL ,
+    `navina_data` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+    `navina_author` INT NOT NULL ,
+    PRIMARY KEY (`navina_id`)
+) ENGINE = InnoDB;
+
+CREATE TABLE `market_db`.`images` (
+    `image_id` INT NOT NULL AUTO_INCREMENT ,
+    `image_hash` VARCHAR(32) NOT NULL ,
+    PRIMARY KEY (`image_id`),
+    UNIQUE (`image_hash`)
+) ENGINE = InnoDB;
+
+CREATE TABLE `market_db`.`post` (
+    `post_id` INT NOT NULL AUTO_INCREMENT ,
+    `post_navina_id` INT NOT NULL ,
+    `post_image_id` INT NOT NULL ,
+    PRIMARY KEY (`post_id`)
+) ENGINE = InnoDB;
+
+
+
